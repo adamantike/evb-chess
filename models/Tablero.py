@@ -5,14 +5,14 @@ class Tablero():
     def __init__(self):
         # Inicialización del tablero
         self.tablero = [[None for i in range(8)] for j in range(8)]
-        # Carga de peones blancos
+        # Carga de peones
         for i in range(8):
-            peon = Peon(color='B', x=i, y=6)
-            self.tablero[i][6] = peon
-        # Carga de peones negros
-        for i in range(8):
-            peon = Peon(color='N', x=i, y=1)
-            self.tablero[i][1] = peon
+            # Peones blancos
+            peon_blanco = Peon(color='B', x=i, y=6)
+            self.tablero[i][6] = peon_blanco
+            # Peones negros
+            peon_negro = Peon(color='N', x=i, y=1)
+            self.tablero[i][1] = peon_negro
 
     def get_posicion(self, x, y):
         return self.tablero[x][y]
