@@ -22,6 +22,9 @@ class Tablero():
         if pieza.puede_mover(self, x2, y2):
             self.tablero[x1][y1] = None
             self.tablero[x2][y2] = pieza
+            # Actualiza las coordenadas de la pieza.
+            pieza.x = x2
+            pieza.y = y2
             print("Pieza movida correctamente.")
         else:
             print("La pieza NO se pudo mover.")
